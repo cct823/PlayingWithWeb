@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./lib/css/home.css" />
     <script src="./lib/js/master.js"></script>
     <script src="./lib/js/fabric.js"></script>
-    <script src="./lib/js/fabric.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -16,11 +15,28 @@
   </head>
 
   <body>
-    <canvas id="c" , width="1200" , height="800"> </canvas>
+    <canvas id="c" , width="900" , height="600"> </canvas>
 
     <div>
+      <code>Click Button to move Rect</code>
       <button id="b">Go Right</button>
+      <br>
+      <code>Change Rect Color</code>
+      <input type="text" placeholder="Input Hex Code" id="rectColor">
+      <button type="button" onclick="changeRColor();">Get Hex Value</button>
+      <br>
+      <code>Change Circle Color</code>
+      <input type="text" placeholder="Input Hex Code" id="cirColor">
+      <button type="button" onclick="changeCColor();">Get Hex Value</button>
+      <br>
+      <code>Change Triangle Color</code>
+      <input type="text" placeholder="Input Hex Code" id="triColor">
+      <button type="button" onclick="changeTColor();">Get Hex Value</button>
+
     </div>
-    <script src="./lib/js/home.js"></script>
+    <script src="./home.js"></script>
+    <!-- <script src="./tutorial.js"></script> -->
+
+    <label> </label>
   </body>
 </html>
