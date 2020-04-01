@@ -2,30 +2,32 @@
 var canvas = new fabric.Canvas("c");
 
 //TODO: add text to the circle
+//TODO: make the function change the color on select item
 // draw finite state machine
 // drawCircle(radius,fill,left,top)
 // drawArrow(startX, startY, endX, endY)
 
 // -------------------------FINITE STATE MACHINE-------------------------------------
 //draw top four circles + 3 arrows
-c1= drawCircle(50,'#00CFFF',100,100)
-drawArrow(200, 150, 270, 150)
-drawCircle(50,'#00CFFF',270,100)
-drawArrow(370, 150, 430, 150)
-drawCircle(50,'#00CFFF',430,100)
-drawArrow(530, 150, 590, 150)
-drawCircle(50,'#00CFFF',590,100)
+drawCircle(50, "#00CFFF", 100, 100);
+addText("1-Start", 15,130, 140);
+drawArrow(200, 150, 270, 150);
+drawCircle(50, "#00CFFF", 270, 100);
+drawArrow(370, 150, 430, 150);
+drawCircle(50, "#00CFFF", 430, 100);
+drawArrow(530, 150, 590, 150);
+drawCircle(50, "#00CFFF", 590, 100);
 
 //draw bottom two circles
-drawCircle(50,'#FC9BA0',345,350)
-drawCircle(50,'#00FF00',590,350)
+drawCircle(50, "#FC9BA0", 345, 350);
+drawCircle(50, "#00FF00", 590, 350);
 
 //draw other arrows
-drawArrow(187,187,360,360)
-drawArrow(330,200,385,350)
-drawArrow(473,200,410,350)
-drawArrow(625,200,440,375)
-drawArrow(640,200,640,350)
+drawArrow(187, 187, 360, 360);
+drawArrow(330, 200, 385, 350);
+drawArrow(473, 200, 410, 350);
+drawArrow(625, 200, 440, 375);
+drawArrow(640, 200, 640, 350);
 
 // -------------------------BUTTON FUNCTION START-------------------------------------
 // change rectangle color
@@ -59,8 +61,8 @@ function addArrow() {
   drawArrow(100, 100, 180, 100);
 }
 
-function addCircle(){
-  drawCircle(50,'blue',200,300)
+function addCircle() {
+  drawCircle(50, "blue", 200, 300);
 }
 
 // create a function to move right for rect object
@@ -70,21 +72,31 @@ $("#b").click(function() {
   canvas.renderAll();
 });
 
-
 // -------------------------DRAWING FUNCTION---------------------------------------
 // draw circle
-function drawCircle(r,f,l, t) {
+
+function addText(txt, size, L, T) {
+  var word = new fabric.Text(txt,{
+    left: L,
+    top: T,
+    fontSize: size,
+  });
+  canvas.add(word);
+  canvas.renderAll();
+}
+
+function drawCircle(r, f, l, t) {
   var circle = new fabric.Circle({
-    radius:r,
-    fill : f,
-    left : l,
-    top : t,
+    radius: r,
+    fill: f,
+    left: l,
+    top: t,
     strokeWidth: 1,
-    stroke: "black",
+    stroke: "black"
   });
 
   canvas.add(circle);
-  canvas.renderAll()
+  canvas.renderAll();
 }
 
 //draw arrow
