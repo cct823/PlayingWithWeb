@@ -10,7 +10,7 @@ var canvas = new fabric.Canvas("c");
 // -------------------------FINITE STATE MACHINE-------------------------------------
 //draw top four circles + 3 arrows
 drawCircle(50, "#00CFFF", 100, 100);
-addText("1-Start", 15,130, 140);
+addText("1-Start", 15,130, 140); // put in first text
 drawArrow(200, 150, 270, 150);
 drawCircle(50, "#00CFFF", 270, 100);
 drawArrow(370, 150, 430, 150);
@@ -30,6 +30,7 @@ drawArrow(625, 200, 440, 375);
 drawArrow(640, 200, 640, 350);
 
 // -------------------------BUTTON FUNCTION START-------------------------------------
+
 // change rectangle color
 function changeRColor() {
   // Selecting the input element and get its value
